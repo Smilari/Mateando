@@ -1,31 +1,62 @@
 ---
-export interface Props {
-  title: string;
+// src/layouts/Layout.astro
+import { ViewTransitions } from 'astro:transitions';
+
+interface Props {
+    title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/mate-icon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-<slot />
+<body>
+    <div class="mate-background fixed inset-0 z-[-1]"></div>
+    <div class="page-wrapper relative z-10">
+        <slot />
+    </div>
 </body>
 </html>
 
 <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
     :root {
-        --mate-green: #4a7c59;
-        --mate-brown: #8c6d46;
+        --color-beige-50: #fdf8f3;
+        --color-beige-100: #f7e8d5;
+        --color-beige-200: #f0d7b5;
+        --color-brown-800: #5c4033;
+        --color-brown-900: #3c2a21;
+        --color-green-600: #2f855a;
+        --color-green-700: #276749;
+        --color-green-800: #22543d;
     }
-    html {
-        scroll-behavior: smooth;
+
+    body {
+        font-family: 'Poppins', 'Roboto', system-ui, sans-serif;
+    }
+
+    .mate-background {
+        background-image:
+          radial-gradient(circle at 20% 20%, var(--color-beige-100) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, var(--color-beige-200) 0%, transparent 50%);
+        opacity: 0.5;
+    }
+
+    .page-wrapper {
+        margin: 0 auto;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Roboto', system-ui, sans-serif;
     }
 </style>
