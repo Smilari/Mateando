@@ -42,7 +42,7 @@ import mateIcon from '../assets/mate-icon.svg';
 
 <script>
   const steps = document.querySelectorAll('.step');
-  const waterAnimation = document.getElementById('water-animation');
+  const waterAnimation: HTMLElement = document.querySelector('#water-animation') as HTMLElement;
 
   steps.forEach((step, index) => {
     step.addEventListener('mouseenter', () => {
