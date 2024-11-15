@@ -1,24 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Introduction from '../components/Introduction.astro';
-import Footer from '../components/Footer.astro';
-import History from "../components/History.astro";
-import Ritual from "../components/Ritual.astro";
-import Benefits from "../components/Benefits.astro";
-import ModernCulture from "../components/ModernCulture.astro";
+import Layout from '@layouts/Layout.astro';
+import Introduction from '@components/Introduction.astro';
+import History from "@components/History.astro";
+import Ritual from "@components/Ritual.astro";
+import Benefits from "@components/Benefits.astro";
+import ModernCulture from "@components/ModernCulture.astro";
 ---
 
 <Layout title="La Cultura del Mate en Argentina">
-    <Header />
-
-    <main class="container mx-auto">
-        <Introduction />
-        <History />
-        <Ritual />
-        <Benefits />
-        <ModernCulture />
-    </main>
-
-    <Footer />
+    <Introduction />
+    <History />
+    <Ritual />
+    <Benefits />
+    <ModernCulture />
 </Layout>
