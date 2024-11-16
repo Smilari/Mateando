@@ -1,0 +1,11 @@
+---
+const { side = "left", title, content } = Astro.props;
+const alignmentClass = side === "right" ? "md:mr-8 md:ml-auto" : "md:ml-8";
+---
+
+<div class= "timeline-item" data-aos="fade-up">
+    <div class= `bg-white p-6 rounded-lg shadow-lg mb-8 md:w-5/12 ${alignmentClass}`>
+        <h3 class="text-xl font-bold text-green-700 mb-2">{title}</h3>
+        <slot />
+    </div>
+</div>
