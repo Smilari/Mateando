@@ -1,9 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import MateStep from './MateStep.jsx'; // Importa si sigue siendo Astro
-import matePrep1 from '/public/mate-prep-1.png';
-import matePrep2 from '/public/mate-prep-1.png';
-import matePrep3 from '/public/mate-prep-1.png';
-import matePrep4 from '/public/mate-prep-1.png';
+import MateStep from './MateStep.jsx';
 
 const steps = [
   { title: 'Preparación', desc: 'Llena el mate con yerba hasta 3/4 de su capacidad.', image: '/mate-prep-1.png', step: 1 },
