@@ -2,7 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Introduction from '@components/Introduction.astro';
 import History from "@components/History.astro";
-import Ritual from "@components/Ritual.jsx";
+import MateCarousel from "../components/MateCarousel.jsx";
 import Benefits from "@components/Benefits.astro";
 import ModernCulture from "@components/ModernCulture.astro";
 ---
@@ -10,7 +10,7 @@ import ModernCulture from "@components/ModernCulture.astro";
 <Layout title="La Cultura del Mate en Argentina">
     <Introduction />
     <History />
-    <Ritual client:load />
+    <MateCarousel client:load />
     <Benefits />
     <ModernCulture />
 </Layout>
