@@ -1,7 +1,7 @@
 const CarouselStep = ({ title, description, src, step }) => {
   return (
     <div
-      className="mate-step bg-slate-50 flex-shrink-0 rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105"
+      className="mate-step bg-white flex-shrink-0 rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105"
       tabIndex="0"
       aria-label={`Paso ${step}: ${title}. ${description}`}
     >

@@ -1,0 +1,32 @@
+---
+import BenefitsItem from "@components/Benefits/BenefitsItem.astro";
+import VarietyItem from "@components/Benefits/VarietyItem.astro";
+---
+
+<section id="beneficios" class="py-20 max-w-[92%] sm:max-w-[80%] mx-auto">
+    <div class="container mx-auto relative">
+        <h2 class="text-3xl md:text-5xl font-bold text-brown-800 mb-12 text-center">
+            Beneficios y Variedades del Mate
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="benefits">
+                <h3 class="text-2xl font-bold text-green-700 mb-4">Beneficios para la Salud</h3>
+                <ul class="space-y-2">
+                    <BenefitsItem benefit="Estimula la concentración y la memoria" />
+                    <BenefitsItem benefit="Rico en antioxidantes" />
+                    <BenefitsItem benefit="Ayuda a la digestión" />
+                    <BenefitsItem benefit="Proporciona energía natural" />
+                </ul>
+            </div>
+            <div class="varieties">
+                <h3 class="text-2xl font-bold text-green-700 mb-4">Variedades de Mate</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <VarietyItem variety="Mate Amargo" description="El clásico, sin azúcar añadido." />
+                    <VarietyItem variety="Mate Dulce" description="Con azúcar o edulcorante para un sabor más suave." />
+                    <VarietyItem variety="Tereré" description="Con azúcar o edulcorante para un sabor más suave." />
+                    <VarietyItem variety="Mate Cocido" description="Preparado como té, en saquitos o suelto." />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

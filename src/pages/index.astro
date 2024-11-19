@@ -1,15 +1,15 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Introduction from '@components/Introduction.astro';
-import History from "@components/History.astro";
-import MateCarousel from "../components/MateCarousel.jsx";
-import Benefits from "@components/Benefits.astro";
+import TimeLine from "@components/TimeLine/TimeLine.astro";
+import MateCarousel from "@components/MateCarousel/MateCarousel.jsx";
+import Benefits from "../components/Benefits/Benefits.astro";
 import ModernCulture from "@components/ModernCulture.astro";
 ---
 
-<Layout title="La Cultura del Mate en Argentina">
+<Layout title="Mate y tradición">
     <Introduction />
-    <History />
+    <TimeLine />
     <MateCarousel client:load />
     <Benefits />
     <ModernCulture />

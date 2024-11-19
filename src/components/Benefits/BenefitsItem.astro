@@ -1,0 +1,10 @@
+---
+import CheckIcon from "@icons/Check.astro";
+
+const {benefit} = Astro.props;
+---
+
+<li class="flex items-center gap-2">
+    <CheckIcon width="24" height="24" />
+    <span> {benefit} </span>
+</li>

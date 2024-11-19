@@ -1,6 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-import mateIcon from '/public/mate-icon.svg';
+import MateIcon from '@icons/Mate.astro';
 ---
 
 <header>
@@ -8,7 +7,7 @@ import mateIcon from '/public/mate-icon.svg';
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
             <!-- Logo y Título -->
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <Image src={mateIcon} alt="Logo Mate" height="40" />
+                <MateIcon width="40" height="40" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap">Mate y tradición</span>
             </a>
 

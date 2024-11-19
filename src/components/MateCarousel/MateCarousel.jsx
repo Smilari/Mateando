@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import CarouselStep from './CarouselStep.jsx';
+import CarouselStep from '@components/MateCarousel/CarouselStep.jsx';
 import '@styles/MateCarousel.css';
 
 const steps = [
@@ -57,7 +57,7 @@ const MateCarousel = () => {
           {/* Previous Button */}
           <button
             onClick={movePrev}
-            className={`absolute left-0 z-10 p-2 bg-white rounded-full shadow-lg ${
+            className={`absolute left-0 z-10 p-3 bg-white rounded-full shadow-lg ${
               isDisabled('prev') ? 'opacity-50 cursor-not-allowed' : 'hover:bg-green-100'
             }`}
             disabled={isDisabled('prev')}
@@ -93,7 +93,7 @@ const MateCarousel = () => {
           {/* Next Button */}
           <button
             onClick={moveNext}
-            className={`absolute right-0 z-10 p-2 bg-white rounded-full shadow-lg ${
+            className={`absolute right-0 z-10 p-3 bg-white rounded-full shadow-lg ${
               isDisabled('next') ? 'opacity-50 cursor-not-allowed' : 'hover:bg-green-100'
             }`}
             disabled={isDisabled('next')}
