@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import CarouselStep from './CarouselStep.jsx';
 import '@styles/MateCarousel.css';
 
@@ -15,38 +15,41 @@ const steps = [
 
 const MateCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = useRef(3);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
 
   const movePrev = () => {
     if (currentIndex > 0) setCurrentIndex((prev) => prev - 1);
   };
 
   const moveNext = () => {
-    if (currentIndex < steps.length - itemsPerPage.current) {
+    if (currentIndex < steps.length - itemsPerPage) {
       setCurrentIndex((prev) => prev + 1);
     }
   };
 
   const isDisabled = (direction) => {
     if (direction === 'prev') return currentIndex <= 0;
-    if (direction === 'next') return currentIndex >= steps.length - itemsPerPage.current;
+    if (direction === 'next') return currentIndex >= steps.length - itemsPerPage;
     return false;
   };
 
   useEffect(() => {
     const updateItemsPerPage = () => {
       const width = window.innerWidth;
-      if (width >= 1024) itemsPerPage.current = 3;
-      else if (width >= 768) itemsPerPage.current = 2;
-      else itemsPerPage.current = 1;
+      if (width >= 1024) setItemsPerPage(3);
+      else if (width >= 768) setItemsPerPage(2);
+      else setItemsPerPage(1);
     };
+
     updateItemsPerPage();
     window.addEventListener('resize', updateItemsPerPage);
     return () => window.removeEventListener('resize', updateItemsPerPage);
   }, []);
 
+  const progressPercentage = ((currentIndex + itemsPerPage) / steps.length) * 100;
+
   return (
-    <section className="py-20 px-6 w-full sm:max-w-[80%] mx-auto">
+    <section className="py-20 max-w-[92%] sm:max-w-[80%] mx-auto">
       <div className="container mx-auto relative">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-brown-800">El Ritual del Mate</h2>
 
@@ -68,13 +71,13 @@ const MateCarousel = () => {
           <div className="overflow-hidden w-full">
             <div
               className="flex transition-transform duration-500"
-              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage.current)}%)` }}
+              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}
             >
               {steps.map((step, index) => (
                 <div
                   key={index}
                   className="flex-shrink-0 w-full px-2"
-                  style={{ flexBasis: `${100 / itemsPerPage.current}%` }}
+                  style={{ flexBasis: `${100 / itemsPerPage}%` }}
                 >
                   <CarouselStep
                     title={step.title}
@@ -100,10 +103,17 @@ const MateCarousel = () => {
             </svg>
           </button>
         </div>
+
+        {/* Progress Bar */}
+        <div className="mt-6 h-2 w-full bg-gray-300 rounded-full">
+          <div
+            className="h-full bg-green-600 rounded-full transition-all duration-500"
+            style={{ width: `${progressPercentage}%` }}
+          ></div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default MateCarousel;
-

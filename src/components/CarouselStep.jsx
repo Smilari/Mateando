@@ -10,7 +10,7 @@ const CarouselStep = ({ title, description, src, step }) => {
           src={src}
           alt={`Paso ${step}: ${title}`}
           className="max-w-[333px] mx-auto h-48 object-cover"
-          loading="lazy"
+          loading="eager"
         />
       </div>
       <div className="p-4 h-32">
