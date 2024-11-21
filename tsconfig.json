@@ -16,7 +16,10 @@
       ],
       "@icons/*": [
         "src/icons/*"
-      ]
+      ],
+      "@utils/*": [
+        "src/components/utils/*"
+      ],
     }
   }
 }

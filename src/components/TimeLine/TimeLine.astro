@@ -1,29 +1,26 @@
 ---
 import TimelineItem from "@components/TimeLine/TimeLineItem.astro";
+import SubTitle from "@utils/SubTitle.astro";
+import SectionContainer from "../utils/SectionContainer.astro";
 ---
 
-<section id="historia" class="py-20">
-    <div class="container mx-auto max-w-[92%] sm:max-w-[80%]">
-        <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
-            Historia y Origen del Mate
-        </h2>
-        <div class="relative">
-            <div class="absolute h-full w-1 bg-green-500 left-1/2 transform -translate-x-1/2"></div>
-            <TimelineItem side="right" title="Siglo XVI">
-                Los guaraníes introducen el mate a los colonizadores españoles.
-            </TimelineItem>
-            <TimelineItem side="left" title="Siglo XVII">
-                El mate se extiende por toda la región del Río de la Plata.
-            </TimelineItem>
-            <TimelineItem side="right" title="Siglo XIX">
-                El mate gana popularidad global como bebida saludable.
-            </TimelineItem>
-            <TimelineItem side="left" title="Siglo XXI">
-                El mate se convierte en bebida nacional en Argentina y Uruguay.
-            </TimelineItem>
-        </div>
+<SectionContainer id="historia" subtitle="Historia y Origen del Mate">
+    <div class="relative">
+        <div class="absolute h-full w-1 bg-green-500 left-1/2 transform -translate-x-1/2"></div>
+        <TimelineItem side="right" title="Siglo XVI">
+            Los guaraníes introducen el mate a los colonizadores españoles.
+        </TimelineItem>
+        <TimelineItem side="left" title="Siglo XVII">
+            El mate se extiende por toda la región del Río de la Plata.
+        </TimelineItem>
+        <TimelineItem side="right" title="Siglo XIX">
+            El mate gana popularidad global como bebida saludable.
+        </TimelineItem>
+        <TimelineItem side="left" title="Siglo XXI">
+            El mate se convierte en bebida nacional en Argentina y Uruguay.
+        </TimelineItem>
     </div>
-</section>
+</SectionContainer>
 
 <script>
   import AOS from 'aos';

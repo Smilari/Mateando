@@ -2,41 +2,37 @@
 import BenefitsItem from "@components/Benefits/BenefitsItem.astro";
 import VarietyItem from "@components/Benefits/VarietyItem.astro";
 import RightArrow from "@icons/RightArrow.astro";
+import SectionContainer from "@utils/SectionContainer.astro";
 ---
 
-<section id="beneficios" class="py-20 max-w-[92%] sm:max-w-[80%] mx-auto">
-    <div class="container mx-auto relative">
-        <h2 class="text-3xl md:text-5xl font-bold text-brown-800 mb-12 text-center">
-            Beneficios y Variantes del Mate
-        </h2>
-        <div class="grid md:grid-cols-3 gap-12">
-            <div class="benefits col-span-1">
-                <h3 class="text-2xl font-bold text-green-700 mb-4">Beneficios para la Salud</h3>
-                <ul class="space-y-2">
-                    <BenefitsItem benefit="Estimula la concentración y la memoria" />
-                    <BenefitsItem benefit="Rico en antioxidantes" />
-                    <BenefitsItem benefit="Ayuda a la digestión" />
-                    <BenefitsItem benefit="Proporciona energía natural" />
-                </ul>
+<SectionContainer id="beneficios" subtitle="Beneficios y Variantes del Mate">
+    <div class="grid md:grid-cols-3 gap-12">
+        <div class="benefits col-span-1">
+            <h3 class="text-2xl font-bold text-green-700 mb-4">Beneficios para la Salud</h3>
+            <ul class="space-y-2">
+                <BenefitsItem benefit="Estimula la concentración y la memoria" />
+                <BenefitsItem benefit="Rico en antioxidantes" />
+                <BenefitsItem benefit="Ayuda a la digestión" />
+                <BenefitsItem benefit="Proporciona energía natural" />
+            </ul>
+        </div>
+        <div class="varieties flex flex-col gap-4 col-span-2">
+            <h3 class="text-2xl font-bold text-green-700">Variantes de Mate</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <VarietyItem variety="Mate Amargo" description="El clásico, sin azúcar añadido." />
+                <VarietyItem variety="Mate Dulce" description="Con azúcar o edulcorante para un sabor más suave." />
+                <VarietyItem variety="Tereré" description="Con agua fría, ideal para el verano." />
+                <VarietyItem variety="Mate Cocido" description="Preparado como té, en saquitos o suelto." />
             </div>
-            <div class="varieties flex flex-col gap-4 col-span-2">
-                <h3 class="text-2xl font-bold text-green-700">Variantes de Mate</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <VarietyItem variety="Mate Amargo" description="El clásico, sin azúcar añadido." />
-                    <VarietyItem variety="Mate Dulce" description="Con azúcar o edulcorante para un sabor más suave." />
-                    <VarietyItem variety="Tereré" description="Con agua fría, ideal para el verano." />
-                    <VarietyItem variety="Mate Cocido" description="Preparado como té, en saquitos o suelto." />
-                </div>
-                <a
-                  href="https://forms.gle/SgW2ReUpwuEs1vg39"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="group inline-flex items-center justify-center gap-2 px-6 py-3 text-md font-bold text-white bg-gradient-to-l from-green-400 to-green-600 rounded-lg shadow-md duration-300 transform hover:scale-[102%]"
-                >
-                    Elegí tu variante favorita
-                    <RightArrow width="24" height="24" />
-                </a>
-            </div>
+            <a
+              href="https://forms.gle/SgW2ReUpwuEs1vg39"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group inline-flex items-center justify-center gap-2 px-6 py-3 text-md font-bold text-white bg-gradient-to-l from-green-400 to-green-600 rounded-lg shadow-md duration-300 transform hover:scale-[102%]"
+            >
+                Elegí tu variante favorita
+                <RightArrow width="24" height="24" />
+            </a>
         </div>
     </div>
-</section>
+</SectionContainer>

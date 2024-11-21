@@ -49,9 +49,16 @@ const MateCarousel = () => {
   const progressPercentage = ((currentIndex + itemsPerPage) / steps.length) * 100;
 
   return (
-    <section className="py-20 max-w-[92%] sm:max-w-[80%] mx-auto">
+    <section id="ritual" className="py-20 max-w-[92%] sm:max-w-[80%] mx-auto">
       <div className="container mx-auto relative">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-brown-800">El Ritual del Mate</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">El Ritual del Mate</h2>
+        <p
+          className="text-sm md:text-base mb-5 bg-green-50 py-4 px-6 text-center rounded-md shadow-md border-l-4 border-green-600"
+        >
+          El mate no solo es una bebida, sino un ritual que refleja la hospitalidad y la
+          conexión entre las personas, considerado un acto de unión social.
+        </p>
+
 
         <div className="relative flex items-center">
           {/* Previous Button */}
@@ -63,7 +70,8 @@ const MateCarousel = () => {
             disabled={isDisabled('prev')}
           >
             <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M11 17a1 1 0 01-.707-.293l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 1.414L7.414 10l4.293 4.293A1 1 0 0111 17z" />
+              <path
+                d="M11 17a1 1 0 01-.707-.293l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 1.414L7.414 10l4.293 4.293A1 1 0 0111 17z"/>
             </svg>
           </button>
 
@@ -99,7 +107,8 @@ const MateCarousel = () => {
             disabled={isDisabled('next')}
           >
             <svg className="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9 17a1 1 0 01-.707-1.707L12.586 10 8.293 5.707A1 1 0 119.707 4.293l5 5a1 1 0 010 1.414l-5 5A1 1 0 019 17z" />
+              <path
+                d="M9 17a1 1 0 01-.707-1.707L12.586 10 8.293 5.707A1 1 0 119.707 4.293l5 5a1 1 0 010 1.414l-5 5A1 1 0 019 17z"/>
             </svg>
           </button>
         </div>
