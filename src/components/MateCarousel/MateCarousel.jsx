@@ -114,9 +114,9 @@ const MateCarousel = () => {
         </div>
 
         {/* Progress Bar */}
-        <div className="mt-6 h-2 w-full bg-gray-300 rounded-full">
+        <div className="mt-6 h-3 w-full bg-gray-300 rounded-full">
           <div
-            className="h-full bg-green-600 rounded-full transition-all duration-500"
+            className="h-full bg-green-500 rounded-full transition-all duration-500"
             style={{ width: `${progressPercentage}%` }}
           ></div>
         </div>

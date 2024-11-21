@@ -1,0 +1,42 @@
+---
+import ArgentinaFlag from "@icons/Argentina.astro";
+import UruguayFlag from "@icons/Uruguay.astro";
+import ParaguayFlag from "@icons/Paraguay.astro";
+import BrasilFlag from "@icons/Brasil.astro";
+
+const { country, amount, percentage } = Astro.props;
+
+let Flag;
+switch (country) {
+  case "Uruguay":
+    Flag = UruguayFlag;
+    break;
+  case "Argentina":
+    Flag = ArgentinaFlag;
+    break;
+  case "Paraguay":
+    Flag = ParaguayFlag;
+    break;
+  case "Brasil":
+    Flag = BrasilFlag;
+    break;
+  default:
+    Flag = null;
+}
+---
+
+<div class="grid grid-cols-[2rem_5rem_1fr_4rem] items-center gap-4">
+    <!-- Bandera -->
+    <div class="w-8 h-8">
+      {Flag && <Flag />}
+    </div>
+    <!-- País -->
+    <span class="text-sm font-bold">{country}</span>
+    <!-- Barra de porcentaje (flexible) -->
+    <div class="bg-gray-300 h-3 rounded-full ">
+        <div class="bg-green-500 h-full rounded-full" style={`width: ${percentage}%`}></div>
+    </div>
+    <!-- Cantidad -->
+    <span class="font-semibold">{amount} kg</span>
+</div>
+

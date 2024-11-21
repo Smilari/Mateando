@@ -1,37 +1,13 @@
 ---
-
+import ConsumptionItem from "@components/ModernCulture/ConsumptionItem.astro";
 ---
 
-<div class="mb-8">
+<div class="mb-12">
     <h2 class="text-2xl font-semibold text-green-700 mb-4">Consumo de Yerba Mate per Cápita</h2>
     <div class="space-y-2">
-        <div class="flex items-center">
-            <span class="w-24 text-green-800 font-bold">Uruguay</span>
-            <div class="flex-1 bg-green-300 h-4 rounded-full overflow-hidden">
-                <div class="bg-green-600 h-full" style="width: 100%;"></div>
-            </div>
-            <span class="ml-4 text-green-700 font-medium">10 kg</span>
-        </div>
-        <div class="flex items-center">
-            <span class="w-24 text-green-800 font-bold">Argentina</span>
-            <div class="flex-1 bg-green-300 h-4 rounded-full overflow-hidden">
-                <div class="bg-green-600 h-full" style="width: 70%;"></div>
-            </div>
-            <span class="ml-4 text-green-700 font-medium">7 kg</span>
-        </div>
-        <div class="flex items-center">
-            <span class="w-24 text-green-800 font-bold">Paraguay</span>
-            <div class="flex-1 bg-green-300 h-4 rounded-full overflow-hidden">
-                <div class="bg-green-600 h-full" style="width: 45%;"></div>
-            </div>
-            <span class="ml-4 text-green-700 font-medium">4.5 kg</span>
-        </div>
-        <div class="flex items-center">
-            <span class="w-24 text-green-800 font-bold">Brasil</span>
-            <div class="flex-1 bg-green-300 h-4 rounded-full overflow-hidden">
-                <div class="bg-green-600 h-full" style="width: 15%;"></div>
-            </div>
-            <span class="ml-4 text-green-700 font-medium">1.5 kg</span>
-        </div>
+        <ConsumptionItem country="Uruguay" amount="10" percentage="100" />
+        <ConsumptionItem country="Argentina" amount="7" percentage="70" />
+        <ConsumptionItem country="Paraguay" amount="4.5" percentage="45" />
+        <ConsumptionItem country="Brasil" amount="1.5" percentage="15" />
     </div>
 </div>
