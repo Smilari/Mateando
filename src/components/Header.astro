@@ -1,12 +1,16 @@
 ---
 import MateIcon from "@icons/Mate.astro";
+import WarIcon from "@icons/WarBonnet.astro";
+import RitualIcon from "@icons/Ritual.astro";
+import MateMonocolorIcon from "@icons/MateMonocolor.astro";
+import LocationIcon from "@icons/Location.astro";
 ---
 
 <header>
     <nav class="bg-gradient-to-b from-green-800 to-green-900 text-slate-100">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+        <div class="max-w-[92%] sm:max-w-[80%] flex flex-wrap items-center justify-between mx-auto py-3">
             <!-- Logo y Título -->
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="https://mateytradicion.netlify.app" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <MateIcon width="40" height="40"/>
                 <span class="self-center text-2xl font-semibold whitespace-nowrap">Mate y tradición</span>
             </a>
@@ -28,21 +32,25 @@ import MateIcon from "@icons/Mate.astro";
                 <ul class="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-green-700 rounded-lg bg-green-900 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-transparent">
                     <li>
                         <a href="#historia"
-                           class="menu-item block py-2 px-3 rounded hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-300 lg:p-0">Historia</a>
-                    </li>
-                    <li>
-                        <a href="#ritual"
-                           class="menu-item block py-2 px-3 rounded hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-300 lg:p-0">Ritual</a>
-                    </li>
-                    <li>
-                        <a href="#beneficios"
-                           class="menu-item block py-2 px-3 rounded hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-300 lg:p-0">Beneficios</a>
-                    </li>
-                    <li>
-                        <a href="#cultura-moderna"
-                           class="menu-item block py-2 px-3 rounded hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-300 lg:p-0">Cultura
-                            Moderna</a>
-                    </li>
+                           class="menu-item flex items-center gap-2 py-2 px-3 rounded hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-300 lg:p-0">
+                            <WarIcon class="w-6 h-6"/>
+                            Historia
+                        </a></li>
+                    <li><a href="#ritual"
+                           class="menu-item flex items-center gap-2 py-2 px-3 rounded hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-300 lg:p-0">
+                        <RitualIcon class="w-6 h-6"/>
+                        Ritual
+                    </a></li>
+                    <li><a href="#beneficios"
+                           class="menu-item flex items-center gap-2 py-2 px-3 rounded hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-300 lg:p-0">
+                        <MateMonocolorIcon class="w-6 h-6"/>
+                        Beneficios y Variantes
+                    </a></li>
+                    <li><a href="#cultura-moderna"
+                           class="menu-item flex items-center gap-2 py-2 px-3 rounded hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-300 lg:p-0">
+                        <LocationIcon class="w-6 h-6"/>
+                        Cultura Moderna
+                    </a></li>
                 </ul>
             </div>
         </div>

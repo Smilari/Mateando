@@ -7,28 +7,26 @@ import GymIcon from "@icons/Gym.astro";
 import TripIcon from "@icons/BeachTrip.astro";
 import ConnectionIcon from "@icons/Connection.astro";
 ---
-<section class="p-8 bg-green-50 rounded-lg shadow-md">
-    <div class="grid md:grid-cols-3 gap-8">
-        <MateCard
-                title="En el Deporte"
-                description="Muchos deportistas eligen el mate como parte de su rutina, ya sea para relajarse o como una forma de compartir en equipo."
-                image={mateDeporte}
-                alt="Mate en deporte"
-                Icon={GymIcon}
-        />
-        <MateCard
-                title="En los Viajes"
-                description="Viajeros y aventureros llevan su mate a todas partes, creando momentos de pausa en medio de la naturaleza, ciudades lejanas o en el mar."
-                image={mateViajes}
-                alt="Mate en viajes"
-                Icon={TripIcon}
-        />
-        <MateCard
-                title="En la Familia y Amigos"
-                description="El mate es el centro de reuniones, símbolo de unión y tradición que conecta generaciones."
-                image={mateFamilia}
-                alt="Mate en familia"
-                Icon={ConnectionIcon}
-        />
-    </div>
+<section class="grid md:grid-cols-3 gap-8">
+    <MateCard
+            title="En el Deporte"
+            description="Muchos deportistas eligen el mate como parte de su rutina, ya sea para relajarse o como una forma de compartir en equipo."
+            image={mateDeporte}
+            alt="Mate en deporte"
+            Icon={GymIcon}
+    />
+    <MateCard
+            title="En los Viajes"
+            description="Viajeros y aventureros llevan su mate a todas partes, creando momentos de pausa en medio de la naturaleza, ciudades lejanas o en el mar."
+            image={mateViajes}
+            alt="Mate en viajes"
+            Icon={TripIcon}
+    />
+    <MateCard
+            title="En la Familia y Amigos"
+            description="El mate es el centro de reuniones, símbolo de unión y tradición que conecta generaciones."
+            image={mateFamilia}
+            alt="Mate en familia"
+            Icon={ConnectionIcon}
+    />
 </section>
