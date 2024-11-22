@@ -3,14 +3,28 @@ import CarouselStep from '@components/MateCarousel/CarouselStep.jsx';
 import '@styles/MateCarousel.css';
 
 const steps = [
-  { title: 'Preparación', desc: 'Calentar el agua a 75-80°C (nunca uses agua hirviendo).', src: '/mate-prep-1.webp', step: 1 },
+  {
+    title: 'Preparación',
+    desc: 'Calentar el agua a 75-80°C (nunca uses agua hirviendo).',
+    src: '/mate-prep-1.webp',
+    step: 1,
+  },
   { title: 'Yerba', desc: 'Llena el mate con yerba hasta 3/4 de su capacidad.', src: '/mate-prep-2.webp', step: 2 },
   { title: 'Agitar', desc: 'Tapar con una mano y agitar por unos segundos.', src: '/mate-prep-3.webp', step: 3 },
   { title: 'Posicionar', desc: 'Ladear la yerba en un costado del mate.', src: '/mate-prep-4.webp', step: 4 },
-  { title: 'Bombilla', desc: 'Colocar la bombilla en la parte menos cargada del mate.', src: '/mate-prep-5.webp', step: 5 },
+  {
+    title: 'Bombilla',
+    desc: 'Colocar la bombilla en la parte menos cargada del mate.',
+    src: '/mate-prep-5.webp',
+    step: 5,
+  },
   { title: 'Cebar', desc: 'Verter el agua del lado de la bombilla.', src: '/mate-prep-6.webp', step: 6 },
-  { title: 'Mate Dulce (opcional)', desc: 'Agregar azúcar del lado de la bombilla.', src: '/mate-prep-7.webp', step: 7 },
-  { title: 'Compartir', desc: 'Compartir el mate con tus amigos y familiares.', src: '/mate-prep-2.webp', step: 8 },
+  {
+    title: 'Mate Dulce (opcional)',
+    desc: 'Agregar el endulzante de tu preferencia del lado de la bombilla.',
+    src: '/mate-prep-7.webp',
+    step: 7,
+  },
 ];
 
 const MateCarousel = () => {
@@ -53,7 +67,7 @@ const MateCarousel = () => {
       <div className="container mx-auto relative">
         <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">El Ritual del Mate</h2>
         <p
-          className="text-sm md:text-base mb-5 bg-green-50 py-4 px-6 text-center rounded-md shadow-md border-l-4 border-green-600"
+          className="text-sm md:text-base mb-5 bg-green-50 py-4 px-6 text-left rounded-md shadow-md border-l-4 border-green-600"
         >
           El mate no solo es una bebida, sino un ritual que refleja la hospitalidad y la
           conexión entre las personas, considerado un acto de unión social.

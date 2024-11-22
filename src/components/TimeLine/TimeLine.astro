@@ -1,6 +1,5 @@
 ---
 import TimelineItem from "@components/TimeLine/TimeLineItem.astro";
-import SubTitle from "@utils/SubTitle.astro";
 import SectionContainer from "../utils/SectionContainer.astro";
 ---
 
@@ -23,11 +22,11 @@ import SectionContainer from "../utils/SectionContainer.astro";
 </SectionContainer>
 
 <script>
-  import AOS from 'aos';
-  import 'aos/dist/aos.css';
+  import AOS from "aos";
+  import "aos/dist/aos.css";
 
   AOS.init({
     duration: 1000,
-    once: true,
+    once: false,
   });
 </script>

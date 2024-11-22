@@ -6,14 +6,15 @@ import MateMonocolorIcon from "@icons/MateMonocolor.astro";
 import LocationIcon from "@icons/Location.astro";
 ---
 
-<header>
+<header class="sticky top-0 z-50">
     <nav class="bg-gradient-to-b from-green-800 to-green-900 text-slate-100">
         <div class="max-w-[92%] sm:max-w-[80%] flex flex-wrap items-center justify-between mx-auto py-3">
             <!-- Logo y Título -->
-            <a href="https://mateytradicion.netlify.app" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="#introduccion" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <MateIcon width="40" height="40"/>
                 <span class="self-center text-2xl font-semibold whitespace-nowrap">Mate y tradición</span>
             </a>
+
 
             <!-- Botón de menú para mobile -->
             <button data-collapse-toggle="navbar-default" type="button"
